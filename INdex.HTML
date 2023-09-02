@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-2 Caption Generator</title>
+</head>
+<body>
+    <h1>GPT-2 Caption Generator</h1>
+    <form action="/get_caption" method="POST">
+        <label for="input_type">Select input type:</label>
+        <select name="input_type" id="input_type">
+            <option value="text">Text</option>
+            <option value="url">URL</option>
+            <option value="pdf">PDF</option>
+        </select>
+        <br><br>
+        <label for="user_input">Enter input:</label>
+        <textarea name="user_input" id="user_input" rows="5" cols="50" required></textarea>
+        <br><br>
+        <label for="category">Enter the category:</label>
+        <input type="text" name="category" id="category" required>
+        <br><br>
+        <input type="submit" value="Generate Caption">
+    </form>
+    <br><br>
+    <h2>Generated Caption:</h2>
+    <p>{{ caption }}</p>
+</body>
+</html>
